@@ -70,7 +70,7 @@ for url in filtered_links[:2]:
     info_dict['Gender'] = gender
     info_dict['Hair'] = hair
     info_dict['Height'] = height
-    info_dict['Weight'] = Weight
+    info_dict['Weight'] = weight
     info_dict['Eyes'] = eyes
     info_dict['Native County'] = native_county
     info_dict['Native State'] = native_state
