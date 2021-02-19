@@ -1,6 +1,16 @@
 from requests_html import HTMLSession
 import re
+import sys
 import pandas as pd
+import argparse
+
+
+#Create argument parser
+parser =argparse.ArgumentParser()
+parser.add_argument("-f","--filepath",required=True)
+args = parser.parse_args()
+destination_path = args.filepath
+
 
 #Instantiate html session, and make request to first url
 session = HTMLSession()
@@ -16,7 +26,7 @@ filtered_links = list(filter(pattern.match, links))
 
 #iterate through urls, collecting relevant
 data_arr = []
-for url in filtered_links[:2]:
+for url in filtered_links:
     info_dict ={}
     try:
 
@@ -49,9 +59,29 @@ for url in filtered_links[:2]:
 
     info_dict['Name'] = name
     info_dict['TDCJ #'] = tdcj
+    info_dict['DOB'] = dob
+    info_dict['Received Date'] = received_date
+    info_dict['Received Age'] = received_age
+    info_dict['Education Level'] = education_level
+    info_dict['Offense Date'] = offense_date
+    info_dict['Age'] = age
+    info_dict['County'] = county
+    info_dict['Race'] = race
+    info_dict['Gender'] = gender
+    info_dict['Hair'] = hair
+    info_dict['Height'] = height
+    info_dict['Weight'] = weight
+    info_dict['Eyes'] = eyes
+    info_dict['Native County'] = native_county
+    info_dict['Native State'] = native_state
+    info_dict['Occupation'] = occupation
+    info_dict['Record'] = record
+    info_dict['Incident'] = incident
+    info_dict['Co_defendants'] = co_defendants
+    info_dict['Victim_race_gender'] = victim_race_gender
     data_arr.append(info_dict)
-    
+
 #Put information into pandas data frame, and write it out to a csv file.
 df= pd.DataFrame(data_arr)
-df.to_csv("~/Desktop/innmates_on_deathrow.csv")
+df.to_csv(destination_path)
 
