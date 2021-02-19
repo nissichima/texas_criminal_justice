@@ -26,7 +26,7 @@ filtered_links = list(filter(pattern.match, links))
 
 #iterate through urls, collecting relevant
 data_arr = []
-for url in filtered_links[:2]:
+for url in filtered_links:
     info_dict ={}
     try:
 
