@@ -38,7 +38,6 @@ for url in filtered_links[:2]:
         received_age = response.html.find('table')[0].find("tr")[4].text.split('\n')[1]
         education_level = response.html.find('table')[0].find("tr")[5].text.split('\n')[1]
         offense_date = response.html.find('table')[0].find("tr")[6].text.split('\n')[1]
-        print(offense_date)
         age = response.html.find('table')[0].find("tr")[7].text.split('\n')[1]
         county = response.html.find('table')[0].find("tr")[8].text.split('\n')[1]
         race = response.html.find('table')[0].find("tr")[9].text.split('\n')[1]
