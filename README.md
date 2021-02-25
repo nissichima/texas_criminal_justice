@@ -7,7 +7,7 @@ This repository will contain code for scraping and collecting the relevant data 
 ## Example usage of scraper
 
 ```bash
-$ git pull https://github.com/nissichima/texas_criminal_justice.git
+$ git clone https://github.com/nissichima/texas_criminal_justice.git
 ```
 
 ```bash
