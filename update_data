@@ -4,3 +4,7 @@
 cd ~/Desktop/texas_criminal_justice
 python code/deathrow.py -f datasets/processed.csv
 git add .
+git status
+git commit -m "Daily data update"
+git push
+echo Job successful!
