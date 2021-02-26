@@ -37,7 +37,7 @@ $ man crontab
 ```
 Open editor to add scheduling command:
 ```bash
-$ Crontab -e
+$ crontab -e
 ```
 ### Cron format
 ```bash
@@ -48,7 +48,7 @@ To learn more about cron format visit:[https://en.wikipedia.org/wiki/Cron]
 ### Example usage
 Schedule the scraper to collect and update data from the website everyday at midnight.
 ```bash
-$ Crontab -e
+$ crontab -e
 ```
 Enter the following into editor:
 ```text
