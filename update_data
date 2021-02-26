@@ -2,8 +2,8 @@
 #This script automates the data scraper
 
 cd ~/Desktop/texas_criminal_justice
-python code/deathrow.py -f datasets/processed.csv
-git add datasets/processed.csv
+python code/deathrow.py -f datasets/inmates_on_deathrow.csv
+git add datasets/inmates_on_deathrow.csv
 git status
 git commit -m "Daily data update"
 git push
