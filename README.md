@@ -1,11 +1,16 @@
 # Death Row in the State of Texas
+
 The objective of this project is to understand gain a general understanding of death row in the state of Texas. Fortunately, a ton of rich data on this subject is publicly available here:
 https://www.tdcj.texas.gov/index.html 
 
 This repository will contain code for scraping and collecting the relevant data for the analysis, as well as the analysis itself. The repo will also contain all the data collected, and hopefully some visualizations.
 
-## Example usage of scraper
+-  **`Table of contents`:**
+	- [Example Usage of Scraper](#example-usage-of-scraper)
+	- [Schedule Daily Data Update](#schedule-daily-data-update)
+	  - [Cron Format](#cron-format)	
 
+## Example Usage of Scraper
 ```bash
 $ git clone https://github.com/nissichima/texas_criminal_justice.git
 ```
@@ -19,7 +24,7 @@ $ python code/deathrow.py --filepath /path/to/save/data/file_name.csv
 ```
 Done! Your data should be in the specificed location, saved as a comma-separated file.
 
-## Schedule daily data update
+## Schedule Daily Data Update
 Crontab comes in handy when trying to automate tasks and you can do it for this as well!
 
 ### Quick start!
@@ -39,7 +44,7 @@ Open editor to add scheduling command:
 ```bash
 $ crontab -e
 ```
-### Cron format
+### Cron Format
 ```bash
 [* * * * *] command_to_execute
 ```
